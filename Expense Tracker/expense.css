@@ -1,0 +1,230 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://mccayduff.com/wp-content/uploads/2018/11/pay-personal-expenses-from-business.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed from height: 100vh; */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #3498db; /* Soft blue */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.summary div {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50; /* Darker gray */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.summary p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2c3e50; /* Consistent with the heading */
+}
+
+.transaction-form {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.transaction-form h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.transaction-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-form input[type="date"],
+.transaction-form input[type="text"],
+.transaction-form input[type="number"] {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ecf0f1; /* Light gray background */
+    transition: border-color 0.3s ease;
+}
+
+.transaction-form input[type="date"]:focus,
+.transaction-form input[type="text"]:focus,
+.transaction-form input[type="number"]:focus {
+    border-color: #3498db; /* Soft blue on focus */
+    outline: none;
+}
+
+.transaction-form button {
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.filter-section h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.filter-section select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: #ecf0f1; /* Consistent with input fields */
+}
+
+.transaction-list h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.transaction-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transaction-list li:hover {
+    background-color: #ecf0f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-list .expense {
+    color: #e74c3c; /* Red for expenses */
+}
+
+.transaction-list .income {
+    color: #2ecc71; /* Green for income */
+}
+
+.chart-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.export-import {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.export-import button {
+    flex: 1;
+    padding: 12px;
+    background-color: #f39c12; /* Orange */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.export-import button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+.export-import input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ecf0f1; /* Consistent with other inputs */
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
+
+    .summary div {
+        margin-bottom: 15px;
+    }
+
+    .export-import {
+        flex-direction: column;
+    }
+
+    .export-import button,
+    .export-import input {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}

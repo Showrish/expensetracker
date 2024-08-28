@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Expense Tracker</h1>
+        
+        <div class="summary">
+            <div>
+                <h3>Total Income</h3>
+                <p id="total-income">$0.00</p>
+            </div>
+            <div>
+                <h3>Total Expenses</h3>
+                <p id="total-expenses">$0.00</p>
+            </div>
+            <div>
+                <h3>Net Income</h3>
+                <p id="net-income">$0.00</p>
+            </div>
+        </div>
+
+        <div class="transaction-form">
+            <h3>Add New Transaction</h3>
+            <form id="transaction-form">
+                <input type="date" id="date" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="text" id="category" placeholder="Category (e.g., Food, Transportation)" required>
+                <input type="number" id="amount" placeholder="Amount (- if expense, + if income)" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+
+        <div class="filter-section">
+            <h3>Filter by Category</h3>
+            <select id="filter-category">
+                <option value="all">All</option>
+            </select>
+        </div>
+
+        <div class="transaction-list">
+            <h3>Transaction List</h3>
+            <ul id="transactions"></ul>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="expense-chart"></canvas>
+        </div>
+
+        <div class="export-import">
+            <button id="export-data">Export Data</button>
+            <input type="file" id="import-data" />
+        </div>
+    </div>
+
+    <script src="expense.js"></script>
+</body>
+</html>
